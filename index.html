@@ -234,6 +234,17 @@
             <div class="message">❤️Sayangku❤️</div>
             <div class="message">💕DUNIAKU💕</div>
             <div class="message">😍CINTAKU😍</div>
+            <div class="message">PENCET LILIN</div>
+
+            <div class="cake">
+                <div class="candle" onclick="extinguishCandle(this)">
+                    <div class="flame"></div>
+                </div>
+            </div>
+
+            <div class="message" id="congratulationsMessage">
+                Horee! Lilin Telah Padam!
+            </div>
         </div>
     </main>
 
@@ -267,6 +278,15 @@
         document.addEventListener("DOMContentLoaded", function () {
             showSection('home');
         });
+
+        function extinguishCandle(candle) {
+      // Menambahkan kelas untuk memadamkan api
+      candle.classList.add('extinguished');
+
+      // Menampilkan pesan "Horee!" setelah lilin padam
+      const message = document.getElementById('congratulationsMessage');
+      message.style.display = 'block';
+    }
     </script>
 </body>
 

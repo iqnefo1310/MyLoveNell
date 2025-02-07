@@ -1,0 +1,98 @@
+#surprise {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+  }
+
+  .message {
+    font-size: 24px;
+    color: #ff6347;
+    font-weight: bold;
+    margin: 10px 0;
+    animation: bounce 1s ease-out, rotate 2s infinite;
+  }
+
+  /* Animasi untuk pesan-pesan */
+  @keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-30px); }
+    100% { transform: translateY(0); }
+  }
+
+  @keyframes rotate {
+    0% { transform: rotate(0); }
+    50% { transform: rotate(15deg); }
+    100% { transform: rotate(0); }
+  }
+
+  /* Styling untuk kue */
+  .cake {
+    width: 350px;
+    height: 180px;
+    background: linear-gradient(to bottom, #f8d8a6, #f5b76e);
+    border-radius: 25px;
+    position: relative;
+    margin: 50px auto;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border: 5px solid #f1a91b;
+    overflow: hidden;
+  }
+
+  /* Dekorasi pada kue */
+  .cake::before {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background-color: #f1a91b;
+    border-radius: 50%;
+  }
+
+  /* Styling untuk lilin */
+  .candle {
+    width: 25px;
+    height: 50px;
+    background-color: #ff4500;
+    border-radius: 5px;
+    position: absolute;
+    top: -60px;
+    left: 160px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Api lilin */
+  .flame {
+    width: 12px;
+    height: 18px;
+    background-color: yellow;
+    border-radius: 50%;
+    position: absolute;
+    top: -22px;
+    left: 6px;
+    box-shadow: 0 0 10px yellow;
+    animation: flicker 0.3s infinite alternate;
+  }
+
+  /* Animasi api lilin berkedip */
+  @keyframes flicker {
+    0% { opacity: 1; }
+    100% { opacity: 0.6; }
+  }
+
+  .extinguished .flame {
+    opacity: 0; /* Hanya membuat api padam, lilinnya tetap ada */
+    animation: none;
+  }
+
+  /* Pesan "Selamat" */
+  .message#congratulationsMessage {
+    display: none;
+    text-align: center;
+    font-size: 36px;
+    color: #ff6347;
+    margin-top: 30px;
+    font-weight: bold;
+    animation: bounce 1s ease-out, rotate 2s infinite;
+  }
